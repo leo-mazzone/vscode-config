@@ -1,0 +1,139 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Left side-bar
+    {
+        "key": "shift+cmd+0",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "shift+cmd+\\",
+        "command": "workbench.view.testing.focus"
+    },
+    // Bottom pane
+    {
+        "key": "ctrl+z",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "alt+cmd+a",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    // Explorer commands
+    {
+        "key": "shift+n f",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+    },
+    {
+        "key": "shift+n d",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+    },
+    {
+        "key": "shift+backspace",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+    },
+    // Debugging (breakpoints)
+    {
+        "key": "cmd+' a",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+    },
+    {
+        "key": "cmd+' backspace",
+        "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+    },
+    // Debugging (control flow)
+    {
+        "key": "cmd+' c",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "cmd+' r",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "cmd+' p",
+        "command": "workbench.action.debug.pause",
+        "when": "debugState == 'running'"
+    },
+    {
+        "key": "cmd+' i",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "cmd+' o",
+        "command": "workbench.action.debug.stepOver",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "cmd+' s",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode && !focusedSessionIsAttach"
+    },
+    // Editor navigation
+    {
+        "key": "alt+cmd+left",
+        "command": "workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "cmd+k shift+cmd+left",
+        "command": "-workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "cmd+k shift+cmd+right",
+        "command": "-workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    // Testing (default, here for reference)
+    // {
+    //     "key": "cmd+; l",
+    //     "command": "testing.reRunLastRun"
+    // },
+    // {
+    //     "key": "cmd+; cmd+l",
+    //     "command": "testing.debugLastRun"
+    // },
+    // {
+    //     "key": "cmd+; c",
+    //     "command": "testing.runAtCursor",
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "cmd+; cmd+c",
+    //     "command": "testing.debugAtCursor",
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "cmd+; cmd+o",
+    //     "command": "testing.showMostRecentOutput",
+    //     "when": "testing.hasAnyResults"
+    // },
+]

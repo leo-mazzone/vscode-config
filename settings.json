@@ -1,0 +1,29 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.fontSize": 18,
+    "window.zoomLevel": 1,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "github.copilot.advanced": {},
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.activityBar.location": "hidden",
+    "chat.commandCenter.enabled": false,
+    "window.customTitleBarVisibility": "windowed",
+    "git.openRepositoryInParentFolders": "never",
+    "testing.coverageToolbarEnabled": true,
+        "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+    },
+    "editor.lineNumbers": "relative",
+}
