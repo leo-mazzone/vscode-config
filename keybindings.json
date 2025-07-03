@@ -1,4 +1,6 @@
 // Place your key bindings in this file to override the defaults
+// Commented out lines are defaults I keep for reference
+
 [
     // Left side-bar
     {
@@ -11,6 +13,11 @@
         "command": "workbench.view.testing.focus"
     },
     // Bottom pane
+    // {
+    //     "key": "ctrl+`",
+    //     "command": "workbench.action.terminal.toggleTerminal",
+    //     "when": "terminal.active"
+    // },
     {
         "key": "ctrl+z",
         "command": "workbench.debug.action.toggleRepl",
@@ -112,7 +119,17 @@
         "command": "-workbench.action.terminal.focusNextPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
-    // Testing (default, here for reference)
+    {
+        "key": "ctrl+=",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    // Testing
     // {
     //     "key": "cmd+; l",
     //     "command": "testing.reRunLastRun"

@@ -25,5 +25,4 @@
             "source.fixAll": "explicit"
         },
     },
-    "editor.lineNumbers": "relative",
 }

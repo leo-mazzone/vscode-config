@@ -13,4 +13,3 @@ ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 rust-lang.rust-analyzer
-vscodevim.vim
