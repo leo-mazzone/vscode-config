@@ -2,16 +2,34 @@
 // Commented out lines are defaults I keep for reference
 
 [
+    // {
+    //     "key": "cmd+1","command": "workbench.action.focusFirstEditorGroup"
+    // },
+    // {
     // Left side-bar
+    // {
+    //     "key": "shift+cmd+e",
+    //     "command": "workbench.view.explorer",
+    //     "when": "viewContainer.workbench.view.explorer.enabled"
+    // },
     {
         "key": "shift+cmd+0",
         "command": "workbench.view.scm",
         "when": "workbench.scm.active"
     },
     {
-        "key": "shift+cmd+\\",
+        "key": "shift+cmd+;",
         "command": "workbench.view.testing.focus"
     },
+    //     "key": "shift+cmd+d",
+    //     "command": "workbench.view.debug",
+    //     "when": "viewContainer.workbench.view.debug.enabled"
+    // },
+    // {
+    //     "key": "shift+cmd+x",
+    //     "command": "workbench.view.extensions",
+    //     "when": "viewContainer.workbench.view.extensions.enabled"
+    // },
     // Bottom pane
     // {
     //     "key": "ctrl+`",
@@ -28,6 +46,21 @@
         "command": "workbench.action.toggleMaximizedPanel"
     },
     // Explorer commands
+    // {
+    //     "key": "space",
+    //     "command": "debug.toggleBreakpoint",
+    //     "when": "breakpointsFocused && !inputFocus"
+    // },
+    {
+        "key": "shift+space",
+        "command": "explorer.openAndPassFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-explorer.openAndPassFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+    },
     {
         "key": "shift+n f",
         "command": "explorer.newFile",
@@ -45,46 +78,50 @@
     },
     // Debugging (breakpoints)
     {
-        "key": "cmd+' a",
+        "key": "alt+z alt+z",
+        "command": "workbench.debug.action.focusBreakpointsView"
+    },
+    {
+        "key": "alt+z a",
         "command": "editor.debug.action.toggleBreakpoint",
         "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
     },
     {
-        "key": "cmd+' backspace",
+        "key": "alt+z backspace",
         "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
     },
     // Debugging (control flow)
     {
-        "key": "cmd+' c",
+        "key": "alt+z c",
         "command": "workbench.action.debug.continue",
         "when": "debugState == 'stopped'"
     },
     {
-        "key": "cmd+' r",
+        "key": "alt+z r",
         "command": "workbench.action.debug.restart",
         "when": "inDebugMode"
     },
     {
-        "key": "cmd+' p",
+        "key": "alt+z p",
         "command": "workbench.action.debug.pause",
         "when": "debugState == 'running'"
     },
     {
-        "key": "cmd+' i",
+        "key": "alt+z i",
         "command": "workbench.action.debug.stepInto",
         "when": "debugState != 'inactive'"
     },
     {
-        "key": "cmd+' o",
+        "key": "alt+z o",
         "command": "workbench.action.debug.stepOver",
         "when": "debugState == 'stopped'"
     },
     {
-        "key": "cmd+' s",
+        "key": "alt+z s",
         "command": "workbench.action.debug.stop",
         "when": "inDebugMode && !focusedSessionIsAttach"
     },
-    // Editor navigation
+    // Tab management
     {
         "key": "alt+cmd+left",
         "command": "workbench.action.moveEditorLeftInGroup"
@@ -93,6 +130,7 @@
         "key": "alt+cmd+right",
         "command": "workbench.action.moveEditorRightInGroup"
     },
+    // Editor navigation
     {
         "key": "cmd+k shift+cmd+left",
         "command": "-workbench.action.moveEditorLeftInGroup"
@@ -129,6 +167,21 @@
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
+    {
+        "key": "ctrl+.",
+        "command": "editor.action.revealDefinition",
+    },
+    {
+        "key": "cmd+f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb"
+    },
+    // {
+    //     "key": "shift+cmd+space",
+    //     "command": "editor.action.triggerParameterHints",
+    //     "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    // },
+
     // Testing
     // {
     //     "key": "cmd+; l",
