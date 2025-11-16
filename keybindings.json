@@ -2,208 +2,213 @@
 // Commented out lines are defaults I keep for reference
 
 [
-    // {
-    //     "key": "cmd+1","command": "workbench.action.focusFirstEditorGroup"
-    // },
-    // {
-    // Left side-bar
-    // {
-    //     "key": "shift+cmd+e",
-    //     "command": "workbench.view.explorer",
-    //     "when": "viewContainer.workbench.view.explorer.enabled"
-    // },
-    {
-        "key": "shift+cmd+0",
-        "command": "workbench.view.scm",
-        "when": "workbench.scm.active"
-    },
-    {
-        "key": "shift+cmd+;",
-        "command": "workbench.view.testing.focus"
-    },
-    //     "key": "shift+cmd+d",
-    //     "command": "workbench.view.debug",
-    //     "when": "viewContainer.workbench.view.debug.enabled"
-    // },
-    // {
-    //     "key": "shift+cmd+x",
-    //     "command": "workbench.view.extensions",
-    //     "when": "viewContainer.workbench.view.extensions.enabled"
-    // },
-    // Bottom pane
-    // {
-    //     "key": "ctrl+`",
-    //     "command": "workbench.action.terminal.toggleTerminal",
-    //     "when": "terminal.active"
-    // },
-    {
-        "key": "ctrl+z",
-        "command": "workbench.debug.action.toggleRepl",
-        "when": "workbench.panel.repl.view.active"
-    },
-    {
-        "key": "alt+cmd+a",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    // Explorer commands
-    // {
-    //     "key": "space",
-    //     "command": "debug.toggleBreakpoint",
-    //     "when": "breakpointsFocused && !inputFocus"
-    // },
-    {
-        "key": "shift+space",
-        "command": "explorer.openAndPassFocus",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
-    },
-    {
-        "key": "cmd+down",
-        "command": "-explorer.openAndPassFocus",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
-    },
-    {
-        "key": "shift+n f",
-        "command": "explorer.newFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
-    },
-    {
-        "key": "shift+n d",
-        "command": "explorer.newFolder",
-        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
-    },
-    {
-        "key": "shift+backspace",
-        "command": "deleteFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
-    },
-    // Debugging (breakpoints)
-    {
-        "key": "alt+z alt+z",
-        "command": "workbench.debug.action.focusBreakpointsView"
-    },
-    {
-        "key": "alt+z a",
-        "command": "editor.debug.action.toggleBreakpoint",
-        "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
-    },
-    {
-        "key": "alt+z backspace",
-        "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
-    },
-    // Debugging (control flow)
-    {
-        "key": "alt+z c",
-        "command": "workbench.action.debug.continue",
-        "when": "debugState == 'stopped'"
-    },
-    {
-        "key": "alt+z r",
-        "command": "workbench.action.debug.restart",
-        "when": "inDebugMode"
-    },
-    {
-        "key": "alt+z p",
-        "command": "workbench.action.debug.pause",
-        "when": "debugState == 'running'"
-    },
-    {
-        "key": "alt+z i",
-        "command": "workbench.action.debug.stepInto",
-        "when": "debugState != 'inactive'"
-    },
-    {
-        "key": "alt+z o",
-        "command": "workbench.action.debug.stepOver",
-        "when": "debugState == 'stopped'"
-    },
-    {
-        "key": "alt+z s",
-        "command": "workbench.action.debug.stop",
-        "when": "inDebugMode && !focusedSessionIsAttach"
-    },
-    // Tab management
-    {
-        "key": "alt+cmd+left",
-        "command": "workbench.action.moveEditorLeftInGroup"
-    },
-    {
-        "key": "alt+cmd+right",
-        "command": "workbench.action.moveEditorRightInGroup"
-    },
-    // Editor navigation
-    {
-        "key": "cmd+k shift+cmd+left",
-        "command": "-workbench.action.moveEditorLeftInGroup"
-    },
-    {
-        "key": "cmd+k shift+cmd+right",
-        "command": "-workbench.action.moveEditorRightInGroup"
-    },
-    {
-        "key": "alt+cmd+left",
-        "command": "-workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+cmd+left",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "alt+cmd+right",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+cmd+right",
-        "command": "-workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "ctrl+=",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "editor.action.revealDefinition",
-    },
-    {
-        "key": "cmd+f12",
-        "command": "-editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb"
-    },
-    // {
-    //     "key": "shift+cmd+space",
-    //     "command": "editor.action.triggerParameterHints",
-    //     "when": "editorHasSignatureHelpProvider && editorTextFocus"
-    // },
+  // {
+  //     "key": "cmd+1","command": "workbench.action.focusFirstEditorGroup"
+  // },
+  // {
+  // Left side-bar
+  // {
+  //     "key": "shift+cmd+e",
+  //     "command": "workbench.view.explorer",
+  //     "when": "viewContainer.workbench.view.explorer.enabled"
+  // },
+  {
+    "key": "shift+cmd+0",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+cmd+;",
+    "command": "workbench.view.testing.focus"
+  },
+  //     "key": "shift+cmd+d",
+  //     "command": "workbench.view.debug",
+  //     "when": "viewContainer.workbench.view.debug.enabled"
+  // },
+  // {
+  //     "key": "shift+cmd+x",
+  //     "command": "workbench.view.extensions",
+  //     "when": "viewContainer.workbench.view.extensions.enabled"
+  // },
+  // Bottom pane
+  // {
+  //     "key": "ctrl+`",
+  //     "command": "workbench.action.terminal.toggleTerminal",
+  //     "when": "terminal.active"
+  // },
+  {
+    "key": "ctrl+z",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  {
+    "key": "alt+cmd+a",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  // Explorer commands
+  // {
+  //     "key": "space",
+  //     "command": "debug.toggleBreakpoint",
+  //     "when": "breakpointsFocused && !inputFocus"
+  // },
+  {
+    "key": "shift+space",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "shift+n f",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "shift+n d",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "shift+backspace",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+  // Debugging (breakpoints)
+  {
+    "key": "alt+z alt+z",
+    "command": "workbench.debug.action.focusBreakpointsView"
+  },
+  {
+    "key": "alt+z a",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+  },
+  {
+    "key": "alt+z backspace",
+    "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+  },
+  // Debugging (control flow)
+  {
+    "key": "alt+z c",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "alt+z r",
+    "command": "workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "alt+z p",
+    "command": "workbench.action.debug.pause",
+    "when": "debugState == 'running'"
+  },
+  {
+    "key": "alt+z i",
+    "command": "workbench.action.debug.stepInto",
+    "when": "debugState != 'inactive'"
+  },
+  {
+    "key": "alt+z o",
+    "command": "workbench.action.debug.stepOver",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "alt+z s",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode && !focusedSessionIsAttach"
+  },
+  // Tab management
+  {
+    "key": "alt+cmd+left",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  // Editor navigation
+  {
+    "key": "cmd+k shift+cmd+left",
+    "command": "-workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "cmd+k shift+cmd+right",
+    "command": "-workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "editor.action.revealDefinition"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && isWeb"
+  }
+  // {
+  //     "key": "shift+cmd+space",
+  //     "command": "editor.action.triggerParameterHints",
+  //     "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  // },
 
-    // Testing
-    // {
-    //     "key": "cmd+; l",
-    //     "command": "testing.reRunLastRun"
-    // },
-    // {
-    //     "key": "cmd+; cmd+l",
-    //     "command": "testing.debugLastRun"
-    // },
-    // {
-    //     "key": "cmd+; c",
-    //     "command": "testing.runAtCursor",
-    //     "when": "editorTextFocus"
-    // },
-    // {
-    //     "key": "cmd+; cmd+c",
-    //     "command": "testing.debugAtCursor",
-    //     "when": "editorTextFocus"
-    // },
-    // {
-    //     "key": "cmd+; cmd+o",
-    //     "command": "testing.showMostRecentOutput",
-    //     "when": "testing.hasAnyResults"
-    // },
+  // Testing
+  // {
+  //     "key": "cmd+; l",
+  //     "command": "testing.reRunLastRun"
+  // },
+  // {
+  //     "key": "cmd+; cmd+l",
+  //     "command": "testing.debugLastRun"
+  // },
+  // {
+  //     "key": "cmd+; c",
+  //     "command": "testing.runAtCursor",
+  //     "when": "editorTextFocus"
+  // },
+  // {
+  //     "key": "cmd+; cmd+c",
+  //     "command": "testing.debugAtCursor",
+  //     "when": "editorTextFocus"
+  // },
+  // {
+  //     "key": "cmd+; cmd+o",
+  //     "command": "testing.showMostRecentOutput",
+  //     "when": "testing.hasAnyResults"
+  // },
 ]
