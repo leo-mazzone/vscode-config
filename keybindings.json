@@ -158,7 +158,7 @@
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+o",
+    "key": "ctrl+i",
     "command": "workbench.action.navigateBack",
     "when": "canNavigateBack"
   },
@@ -180,7 +180,12 @@
     "key": "cmd+f12",
     "command": "-editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && isWeb"
-  }
+},
+{
+    "key": "ctrl+o",
+    "command": "-lineBreakInsert",
+    "when": "textInputFocus && !editorReadonly"
+}
   // {
   //     "key": "shift+cmd+space",
   //     "command": "editor.action.triggerParameterHints",
